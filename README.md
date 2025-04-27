@@ -1,36 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hub Express
 
-## Getting Started
+### (Em desenvolvimento)
 
-First, run the development server:
+O **Hub Express** é uma plataforma de ferramentas utilitárias online. A ideia é reunir várias funcionalidades em um único local, oferecendo uma interface limpa, simples e intuitiva.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Funcionalidades
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Ferramentas utilitárias:** Uma coleção de ferramentas úteis como geradores de senha, encurtadores de URL, conversores de unidades e muito mais.
+- **Interface dinâmico e responsiva:** Desenvolvido para ser acessível e funcional em qualquer dispositivo, proporcionando uma experiência de usuário fluida.
+- **Integração com Redis:** Armazenamento em tempo real para contagem de métricas e dados gerados pelos usuários, com a possibilidade de adicionar novas ferramentas facilmente.
+- **Auto-atualização de ferramentas:** À medida que novas ferramentas são adicionadas ou alteradas, o sistema é atualizado dinamicamente para refletir as mudanças sem a necessidade de reinicializar o servidor.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Como Funciona
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+O Hub Express oferece uma interface simples onde as ferramentas podem ser acessadas rapidamente. Cada ferramenta tem uma chave única associada, e o sistema rastreia o número de vezes que cada ferramenta foi utilizada, exibindo essas métricas na página inicial.
