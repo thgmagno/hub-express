@@ -1,8 +1,8 @@
 import { Page } from '@/components/Page'
 
-export default function Home() {
+export default async function PasswordGenerator() {
   return (
-    <Page title="HubExpress">
+    <Page title="Gerador de senha segura">
       <p>conteudo da pagina</p>
     </Page>
   )
