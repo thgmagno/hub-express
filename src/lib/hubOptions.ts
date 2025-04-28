@@ -7,7 +7,7 @@ export const hubOptions = [
     icon: Home,
   },
   {
-    title: 'Gerador de Senha',
+    title: 'Gerador de Senhas',
     url: '/password-generator',
     icon: Lock,
   },
@@ -22,7 +22,7 @@ export const hubOptions = [
     icon: Text,
   },
   {
-    title: 'JSON <> Typescript',
+    title: 'JSON ↔ Typescript',
     url: '/converter',
     icon: FileCode,
   },
