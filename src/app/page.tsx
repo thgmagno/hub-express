@@ -14,7 +14,7 @@ export default async function Home() {
 
         <div className="flex flex-col gap-6 xl:flex-row">
           <Button asChild>
-            <Link href="/password-generator">Gerador de senha</Link>
+            <Link href="/password-generator">Gerador de Senha</Link>
           </Button>
           <Button asChild>
             <Link href="/shortener">Encurtador de URLs</Link>
