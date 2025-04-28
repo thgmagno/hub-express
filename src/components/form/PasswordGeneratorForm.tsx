@@ -20,7 +20,7 @@ export function PasswordGeneratorForm() {
   }
 
   return (
-    <form action={action} className="mx-auto my-5 max-w-lg space-y-5">
+    <form action={action} className="space-y-5">
       <div className="flex flex-col space-y-2.5">
         <Label>Comprimento da senha: {passwordLength}</Label>
         <Slider

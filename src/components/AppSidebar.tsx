@@ -1,7 +1,5 @@
 'use client'
 
-import { Home, Lock } from 'lucide-react'
-
 import {
   Sidebar,
   SidebarContent,
@@ -13,6 +11,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from '@/components/ui/sidebar'
+import { Home, Lock, Link, FileCode, Text } from 'lucide-react'
 
 const items = [
   {
@@ -21,9 +20,24 @@ const items = [
     icon: Home,
   },
   {
-    title: 'Gerador de senha',
+    title: 'Gerador de Senha',
     url: '/password-generator',
     icon: Lock,
+  },
+  {
+    title: 'Encurtador de URLs',
+    url: '/shortener',
+    icon: Link,
+  },
+  {
+    title: 'Contador de Caracteres',
+    url: '/counter',
+    icon: Text,
+  },
+  {
+    title: 'JSON <> Typescript',
+    url: '/converter',
+    icon: FileCode,
   },
 ]
 
