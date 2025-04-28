@@ -11,35 +11,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from '@/components/ui/sidebar'
-import { Home, Lock, Link, FileCode, Text } from 'lucide-react'
-
-const items = [
-  {
-    title: 'Início',
-    url: '/',
-    icon: Home,
-  },
-  {
-    title: 'Gerador de Senha',
-    url: '/password-generator',
-    icon: Lock,
-  },
-  {
-    title: 'Encurtador de URLs',
-    url: '/shortener',
-    icon: Link,
-  },
-  {
-    title: 'Contador de Caracteres',
-    url: '/counter',
-    icon: Text,
-  },
-  {
-    title: 'JSON <> Typescript',
-    url: '/converter',
-    icon: FileCode,
-  },
-]
+import { hubOptions } from '@/lib/hubOptions'
 
 export function AppSidebar() {
   const { open, setOpen, isMobile } = useSidebar()
@@ -56,12 +28,12 @@ export function AppSidebar() {
           <SidebarGroupLabel>HubExpress</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
+              {hubOptions.map((option) => (
+                <SidebarMenuItem key={option.title}>
                   <SidebarMenuButton asChild>
-                    <button onClick={() => handleClick(item.url)}>
-                      <item.icon />
-                      <span>{item.title}</span>
+                    <button onClick={() => handleClick(option.url)}>
+                      <option.icon />
+                      <span>{option.title}</span>
                     </button>
                   </SidebarMenuButton>
                 </SidebarMenuItem>

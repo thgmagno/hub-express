@@ -1,6 +1,6 @@
 import { Page } from '@/components/Page'
 import { Button } from '@/components/ui/button'
-import { ArrowLeftRight } from 'lucide-react'
+import { hubOptions } from '@/lib/hubOptions'
 import Link from 'next/link'
 
 export default async function Home() {
@@ -13,20 +13,13 @@ export default async function Home() {
         </p>
 
         <div className="flex flex-col gap-6 xl:flex-row">
-          <Button asChild>
-            <Link href="/password-generator">Gerador de senha</Link>
-          </Button>
-          <Button asChild>
-            <Link href="/shortener">Encurtador de URLs</Link>
-          </Button>
-          <Button asChild>
-            <Link href="/counter">Contador de Caracteres</Link>
-          </Button>
-          <Button asChild>
-            <Link href="/converter">
-              Converter JSON <ArrowLeftRight /> Typescript
-            </Link>
-          </Button>
+          {hubOptions
+            .sort((a, b) => a.title.localeCompare(b.title))
+            .map((i) => (
+              <Button asChild key={i.url}>
+                <Link href={i.url}>{i.title}</Link>
+              </Button>
+            ))}
         </div>
       </div>
     </Page>
