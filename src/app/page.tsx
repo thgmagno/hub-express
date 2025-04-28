@@ -14,6 +14,7 @@ export default async function Home() {
 
         <div className="flex flex-col gap-6 xl:flex-row">
           {hubOptions
+            .filter((item) => item.url !== '/')
             .sort((a, b) => a.title.localeCompare(b.title))
             .map((i) => (
               <Button asChild key={i.url}>
