@@ -22,7 +22,7 @@ export const hubOptions = [
     icon: Text,
   },
   {
-    title: 'JSON ↔ Typescript',
+    title: 'Converter JSON ↔ Typescript',
     url: '/converter',
     icon: FileCode,
   },
