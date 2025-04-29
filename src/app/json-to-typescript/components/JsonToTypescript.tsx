@@ -25,7 +25,7 @@ export function JsonToTypescript() {
   }
 
   return (
-    <main className="space-y-4 p-4">
+    <main className="space-y-4">
       <Textarea
         value={json}
         onChange={(e) => setJson(e.target.value)}

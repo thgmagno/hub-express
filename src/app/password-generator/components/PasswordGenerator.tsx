@@ -34,7 +34,7 @@ export function PasswordGenerator() {
   }
 
   return (
-    <div className="mx-auto flex max-w-md flex-col gap-4">
+    <main className="mx-auto flex max-w-md flex-col gap-4">
       <div className="flex flex-col gap-4">
         <Label>Opções de caracteres:</Label>
         <div className="flex flex-col gap-2 pl-2">
@@ -100,6 +100,6 @@ export function PasswordGenerator() {
           <CopyButton text={password} />
         </div>
       )}
-    </div>
+    </main>
   )
 }
