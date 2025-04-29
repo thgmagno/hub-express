@@ -3,6 +3,7 @@
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
 import { AppSidebar } from '@/components/AppSidebar'
 import { useEffect } from 'react'
+import { Toaster } from 'react-hot-toast'
 import crypto from 'crypto'
 
 interface ProvidersProps {
@@ -98,6 +99,7 @@ function AppProvider({
         <SidebarTrigger />
         {children}
       </main>
+      <Toaster />
     </SidebarProvider>
   )
 }

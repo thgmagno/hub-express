@@ -11,7 +11,8 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from '@/components/ui/sidebar'
-import { hubOptions } from '@/lib/hubOptions'
+import { Menu } from '@/lib/menu'
+import { Home } from 'lucide-react'
 
 export function AppSidebar() {
   const { open, setOpen, isMobile } = useSidebar()
@@ -28,16 +29,26 @@ export function AppSidebar() {
           <SidebarGroupLabel>HubExpress</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {hubOptions.map((option) => (
-                <SidebarMenuItem key={option.title}>
-                  <SidebarMenuButton asChild>
-                    <button onClick={() => handleClick(option.url)}>
-                      <option.icon />
-                      <span>{option.title}</span>
-                    </button>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <button onClick={() => handleClick('/')}>
+                    <Home />
+                    <span>Início</span>
+                  </button>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              {Menu.sort((a, b) => a.title.localeCompare(b.title)).map(
+                (option) => (
+                  <SidebarMenuItem key={option.title}>
+                    <SidebarMenuButton asChild>
+                      <button onClick={() => handleClick(option.url)}>
+                        <option.icon />
+                        <span>{option.title}</span>
+                      </button>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                ),
+              )}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

@@ -16,7 +16,7 @@ export function CharactersCounter() {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <div className="flex gap-4 text-lg">
+      <div className="flex gap-4 text-sm text-gray-300 sm:text-base">
         <p>
           Caracteres: <span className="font-bold">{caracteres}</span>
         </p>

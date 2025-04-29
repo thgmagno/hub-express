@@ -1,6 +1,6 @@
 import { Page } from '@/components/Page'
 import { Button } from '@/components/ui/button'
-import { hubOptions } from '@/lib/hubOptions'
+import { Menu } from '@/lib/menu'
 import Link from 'next/link'
 
 export default async function Home() {
@@ -13,14 +13,11 @@ export default async function Home() {
         </p>
 
         <div className="flex flex-col gap-6 xl:flex-row">
-          {hubOptions
-            .filter((item) => item.url !== '/')
-            .sort((a, b) => a.title.localeCompare(b.title))
-            .map((i) => (
-              <Button asChild key={i.url}>
-                <Link href={i.url}>{i.title}</Link>
-              </Button>
-            ))}
+          {Menu.sort((a, b) => a.title.localeCompare(b.title)).map((i) => (
+            <Button asChild key={i.url}>
+              <Link href={i.url}>{i.title}</Link>
+            </Button>
+          ))}
         </div>
       </div>
     </Page>

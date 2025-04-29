@@ -1,9 +1,9 @@
 import { DevelopmentAlert } from '@/components/DevelopmentAlert'
 import { Page } from '@/components/Page'
 
-export default async function Converter() {
+export default async function UrlShortenerPage() {
   return (
-    <Page title="Converter JSON <> Typescript">
+    <Page title="Encurtador de URLs">
       <DevelopmentAlert />
     </Page>
   )

@@ -1,11 +1,6 @@
-import { Home, LinkIcon, FileCode, Lock, Text } from 'lucide-react'
+import { LinkIcon, FileCode, Lock, Text } from 'lucide-react'
 
-export const hubOptions = [
-  {
-    title: 'Início',
-    url: '/',
-    icon: Home,
-  },
+export const Menu = [
   {
     title: 'Gerador de Senhas',
     url: '/password-generator',
@@ -13,17 +8,17 @@ export const hubOptions = [
   },
   {
     title: 'Encurtador de URLs',
-    url: '/shortener',
+    url: '/url-shortener',
     icon: LinkIcon,
   },
   {
     title: 'Contador de Caracteres',
-    url: '/counter',
+    url: '/character-counter',
     icon: Text,
   },
   {
     title: 'Converter JSON <> Typescript',
-    url: '/converter',
+    url: '/json-to-typescript',
     icon: FileCode,
   },
 ]
