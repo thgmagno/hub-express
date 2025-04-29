@@ -17,7 +17,7 @@ export const Menu = [
     icon: Text,
   },
   {
-    title: 'Converter JSON <> Typescript',
+    title: 'JSON para Typescript',
     url: '/json-to-typescript',
     icon: FileCode,
   },

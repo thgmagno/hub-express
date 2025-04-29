@@ -95,7 +95,7 @@ export function PasswordGenerator() {
       <Button onClick={handleGenerate}>Gerar senha</Button>
 
       {password && (
-        <div className="flex items-center gap-2">
+        <div className="bg-card border-input flex items-center gap-2 rounded-md border p-4 shadow-sm">
           <Display value={password} />
           <CopyButton text={password} />
         </div>
