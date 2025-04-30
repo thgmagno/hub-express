@@ -21,8 +21,10 @@ export async function generateUniqueUrl(originalUrl: string): Promise<string> {
     idAvailable = (await redis.get(`short:${id}`)) === null
   }
 
-  await redis.set(`short:${id}`, originalUrl, { EX: 60 * 60 * 24 * 30 })
-  await redis.set(`url:${originalUrl}`, id, { EX: 60 * 60 * 24 * 30 })
+  await Promise.all([
+    redis.set(`short:${id}`, originalUrl, { EX: 60 * 60 * 24 * 30 }),
+    redis.set(`url:${originalUrl}`, id, { EX: 60 * 60 * 24 * 30 }),
+  ])
 
   return `${process.env.BASE_URL}/api/url/${id}`
 }
