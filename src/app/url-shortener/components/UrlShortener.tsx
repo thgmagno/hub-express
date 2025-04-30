@@ -12,9 +12,7 @@ export function UrlShortener() {
   const [url, setUrl] = useState('')
   const [formState, action, isPending] = useActionState(
     actions.urlShortenerActions.shorten,
-    {
-      errors: {},
-    },
+    { errors: {} },
   )
 
   useEffect(() => {
