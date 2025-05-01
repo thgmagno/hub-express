@@ -16,7 +16,7 @@ export function generatePassword({
   const upperChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
   const lowerChars = 'abcdefghijklmnopqrstuvwxyz'
   const numberChars = '0123456789'
-  const symbolChars = '!@#$%^&*()'
+  const symbolChars = '!?$&@#%*+-'
 
   let allChars = ''
   const requiredChars: string[] = []
