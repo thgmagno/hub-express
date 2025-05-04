@@ -38,7 +38,7 @@ export function UrlShortener() {
 
       {formState.data?.url && (
         <div className="bg-card border-input flex items-center gap-2 rounded-md border p-4 shadow-sm">
-          <Display value={formState.data.url} />
+          <Display value={formState.data.url} isUrl />
           <CopyButton text={formState.data.url} />
         </div>
       )}
