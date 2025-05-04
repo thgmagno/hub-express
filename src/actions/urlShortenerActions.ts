@@ -1,6 +1,5 @@
 'use server'
 
-import { generateUniqueUrl } from '@/app/url-shortener/services/generateUniqueUrl'
 import { UrlShortenerSchema } from '@/lib/schemas/UrlShortenerSchema'
 import { UrlShortenerFormState } from '@/lib/states/UrlShortenerFormState'
 
@@ -17,9 +16,14 @@ export async function shorten(
   }
 
   try {
+    const res = await fetch(`${process.env.API_GO_URL}/shorten-url`, {
+      method: 'POST',
+      body: JSON.stringify({ url: parsed.data.url }),
+    }).then((res) => res.json())
+
     return {
       errors: {},
-      data: { url: await generateUniqueUrl(parsed.data.url) },
+      data: { url: res.url },
     }
   } catch {
     return {
